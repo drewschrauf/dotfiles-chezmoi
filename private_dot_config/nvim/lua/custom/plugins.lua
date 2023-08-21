@@ -31,6 +31,8 @@ local plugins = {
 
   { "christoomey/vim-tmux-navigator", lazy = false },
   { "vim-scripts/BufOnly.vim", cmd = "BufOnly" },
+  { "romainl/vim-cool", lazy = false },
+  { "kdheepak/lazygit.nvim", cmd = "LazyGit" },
 }
 
 return plugins

@@ -10,6 +10,8 @@ M.general = {
     ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
     ["<leader>o"] = { ":BufOnly<CR>", "close other buffers" },
+    ["<leader>lg"] = { ":LazyGit<CR>", "open lazygit" },
+    ["Q"] = { ":qa<CR>", "quick close" },
   },
 
   i = {
