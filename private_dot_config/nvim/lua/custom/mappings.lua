@@ -12,6 +12,7 @@ M.general = {
     ["<leader>o"] = { ":BufOnly<CR>", "close other buffers" },
     ["<leader>lg"] = { ":LazyGit<CR>", "open lazygit" },
     ["Q"] = { ":qa<CR>", "quick close" },
+    ["<leader>tp"] = { ":silent exec '!tmux split-window -h -p 30'<CR>", "new tmux pane" },
   },
 
   i = {

@@ -5,9 +5,17 @@ local formatting = null_ls.builtins.formatting
 local lint = null_ls.builtins.diagnostics
 
 local sources = {
-  formatting.prettierd,
+  formatting.prettierd.with {
+    condition = function(utils)
+      return utils.root_has_file { ".prettierrc", ".prettierrc.yml" }
+    end,
+  },
   formatting.stylua,
-  lint.eslint_d,
+  lint.eslint_d.with {
+    condition = function(utils)
+      return utils.root_has_file { ".eslintrc", ".eslintrc.yml" }
+    end,
+  },
 }
 
 null_ls.setup {
