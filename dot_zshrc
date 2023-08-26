@@ -1,0 +1,19 @@
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+
+export NVM_AUTO_USE=true
+export EDITOR=nvim
+export FZF_TMUX=0
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git" --glob "!esy.lock" --glob "!.yarn/cache"'
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+
+autoload -Uz compinit && compinit
+antidote load
+autoload -Uz promptinit && promptinit && prompt pure
+
+alias n='nvim'
+alias tm='tmux attach || tmux new'
+alias ls='exa'
+alias cat='bat'
+alias ltb="yarn lint && yarn test && yarn build"
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
