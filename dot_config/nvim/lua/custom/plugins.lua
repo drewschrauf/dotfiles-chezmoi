@@ -40,6 +40,24 @@ local plugins = {
     },
   },
 
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = {
+      git = {
+        enable = true,
+      },
+
+      renderer = {
+        highlight_git = true,
+        icons = {
+          show = {
+            git = true,
+          },
+        },
+      },
+    },
+  },
+
   { "christoomey/vim-tmux-navigator", lazy = false },
   { "vim-scripts/BufOnly.vim", cmd = "BufOnly" },
   { "romainl/vim-cool", lazy = false },
