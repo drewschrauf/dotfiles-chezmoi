@@ -1,6 +1,5 @@
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 
-export NVM_AUTO_USE=true
 export EDITOR=nvim
 export FZF_TMUX=0
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git" --glob "!esy.lock" --glob "!.yarn/cache"'
@@ -15,5 +14,12 @@ alias tm='tmux attach || tmux new'
 alias ls='exa'
 alias cat='bat'
 alias ltb="yarn lint && yarn test && yarn build"
+
+# terragrunt aliases
+alias ta="terragrunt run-all apply --terragrunt-non-interactive --terragrunt-working-dir"
+alias tp="terragrunt run-all plan --terragrunt-non-interactive --terragrunt-working-dir"
+alias tdel="find . -name '.terra*' -type d -print | xargs rm -rf"
+
+. /opt/asdf-vm/asdf.sh
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
