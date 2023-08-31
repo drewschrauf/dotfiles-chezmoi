@@ -36,6 +36,7 @@ local plugins = {
         "prettierd",
         "eslint_d",
         "terraform-ls",
+        "rust-analyzer",
       },
     },
   },
