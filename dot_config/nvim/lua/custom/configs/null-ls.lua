@@ -7,6 +7,10 @@ local lint = null_ls.builtins.diagnostics
 local sources = {
   formatting.prettierd,
   formatting.stylua,
+  formatting.rustfmt,
+  formatting.terraform_fmt.with {
+    extra_filetypes = { "hcl" },
+  },
   lint.eslint_d,
 }
 
