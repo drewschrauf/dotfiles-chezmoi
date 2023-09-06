@@ -64,6 +64,15 @@ local plugins = {
   { "romainl/vim-cool", lazy = false },
   { "kdheepak/lazygit.nvim", cmd = "LazyGit" },
   { "tpope/vim-surround", lazy = false },
+  { "gbprod/yanky.nvim", lazy = false, opts = {} },
+  { "karb94/neoscroll.nvim", lazy = false, opts = {} },
+  {
+    "ggandor/leap.nvim",
+    lazy = false,
+    config = function()
+      require("leap").add_default_mappings()
+    end,
+  },
 }
 
 return plugins
