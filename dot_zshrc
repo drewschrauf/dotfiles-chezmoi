@@ -1,7 +1,5 @@
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 
-export PATH=$HOME/.cargo/bin:$PATH
-
 export EDITOR=nvim
 export FZF_TMUX=0
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git" --glob "!esy.lock" --glob "!.yarn/cache"'
