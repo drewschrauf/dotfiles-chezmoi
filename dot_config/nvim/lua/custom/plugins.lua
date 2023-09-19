@@ -61,11 +61,11 @@ local plugins = {
 
   { "christoomey/vim-tmux-navigator", lazy = false },
   { "vim-scripts/BufOnly.vim", cmd = "BufOnly" },
-  { "romainl/vim-cool", lazy = false },
+  { "romainl/vim-cool", event = "VeryLazy" },
   { "kdheepak/lazygit.nvim", cmd = "LazyGit" },
-  { "tpope/vim-surround", lazy = false },
-  { "gbprod/yanky.nvim", lazy = false, opts = {} },
-  { "karb94/neoscroll.nvim", lazy = false, opts = {} },
+  { "tpope/vim-surround", event = "VeryLazy" },
+  { "gbprod/yanky.nvim", event = "VeryLazy", opts = {} },
+  { "karb94/neoscroll.nvim", event = "VeryLazy", opts = {} },
   {
     "ggandor/leap.nvim",
     lazy = false,
