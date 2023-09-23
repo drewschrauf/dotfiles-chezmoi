@@ -27,7 +27,9 @@ local sources = {
   formatting.terraform_fmt.with {
     extra_filetypes = { "hcl" },
   },
+  formatting.shfmt,
   lint.eslint_d,
+  lint.shellcheck,
 }
 
 null_ls.setup {
